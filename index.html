@@ -9,11 +9,15 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        rel="stylesheet">
 
     <!-- Libraries -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -25,120 +29,139 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5">
-    <a href="#home" class="navbar-brand d-block d-lg-none">
-        <h1 class="text-primary fw-bold m-0">Boboxon</h1>
-    </a>
-    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5">
+        <a href="#home" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary fw-bold m-0">Boboxon</h1>
+        </a>
 
-    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-        <div class="navbar-nav ms-auto">
-            <a href="#home" class="nav-item nav-link active">Home</a>
-            <a href="#about" class="nav-item nav-link">About</a>
-            <a href="#skill" class="nav-item nav-link">Skills</a>
-            <a href="#project" class="nav-item nav-link">Projects</a>
-            <a href="#contact" class="nav-item nav-link">Contact</a>
-        </div>
-    </div>
-</nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<!-- Hero -->
-<div class="container-fluid bg-light my-6 mt-0" id="home">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <h3 class="text-primary mb-3">Hello, I'm</h3>
-                <h1 class="display-3 mb-3">Abdirimov Boboxon</h1>
-                <h4 class="text-muted">Frontend / Web Developer</h4>
-                <p class="mt-4">
-                    I build modern, responsive and user-friendly websites.
-                    Passionate about clean code and learning new technologies.
-                </p>
-                <a href="#contact" class="btn btn-primary py-3 px-4 mt-3">Contact Me</a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <a href="#project" class="nav-item nav-link">Projects</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
         </div>
-    </div>
-</div>
+    </nav>
 
-<!-- About -->
-<div class="container-xxl py-6" id="about">
-    <div class="container">
-        <h1 class="display-5 mb-4">About Me</h1>
-        <p>
-            I am a motivated web developer focused on building clean and efficient
-            websites using modern technologies. I enjoy learning, improving my skills
-            and working on real-world projects.
-        </p>
-    </div>
-</div>
-
-<!-- Skills -->
-<div class="container-xxl py-6" id="skill">
-    <div class="container">
-        <h1 class="display-5 mb-4">My Skills</h1>
-
-        <div class="skill mb-3">
-            <h6>HTML / CSS</h6>
-            <div class="progress">
-                <div class="progress-bar bg-primary" style="width: 90%"></div>
+    <!-- Hero -->
+    <section class="container-fluid bg-light min-vh-100 d-flex align-items-center" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="text-primary mb-3">Hello, I'm</h3>
+                    <h1 class="display-3 fw-bold mb-3">Abdirimov Boboxon</h1>
+                    <h4 class="text-muted mb-4">Frontend / Web Developer</h4>
+                    <p>
+                        I build modern, responsive and user-friendly websites.
+                        Passionate about clean code and learning new technologies.
+                    </p>
+                    <a href="#contact" class="btn btn-primary py-3 px-4 mt-3">
+                        Contact Me
+                    </a>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="skill mb-3">
-            <h6>JavaScript</h6>
-            <div class="progress">
-                <div class="progress-bar bg-warning" style="width: 75%"></div>
+    <!-- About -->
+    <section class="container-xxl py-6" id="about">
+        <div class="container">
+            <h1 class="display-5 mb-4">About Me</h1>
+            <p>
+                I am a motivated web developer focused on building clean and efficient
+                websites using modern technologies. I enjoy learning, improving my skills
+                and working on real-world projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="container-xxl py-6 bg-light" id="skill">
+        <div class="container">
+            <h1 class="display-5 mb-4">My Skills</h1>
+
+            <div class="mb-3">
+                <h6>HTML / CSS</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" style="width: 90%"></div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <h6>JavaScript</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <h6>Git & GitHub</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 70%"></div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <h6>Java (Learning)</h6>
+                <div class="progress">
+                    <div class="progress-bar bg-info" style="width: 60%"></div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="skill mb-3">
-            <h6>Git & GitHub</h6>
-            <div class="progress">
-                <div class="progress-bar bg-success" style="width: 70%"></div>
-            </div>
+    <!-- Projects -->
+    <section class="container-xxl py-6" id="project">
+        <div class="container">
+            <h1 class="display-5 mb-4">Projects</h1>
+            <p>My projects will be added here soon.</p>
         </div>
+    </section>
 
-        <div class="skill mb-3">
-            <h6>Java (Learning)</h6>
-            <div class="progress">
-                <div class="progress-bar bg-info" style="width: 60%"></div>
-            </div>
+    <!-- Contact -->
+    <section class="container-xxl py-6 bg-light" id="contact">
+        <div class="container">
+            <h1 class="display-5 mb-4">Contact</h1>
+            <p>Email: <b>boboxon@example.com</b></p>
+            <p>
+                GitHub:
+                <a href="https://github.com/AbdirimovBoboxon" target="_blank">
+                    github.com/AbdirimovBoboxon
+                </a>
+            </p>
+            <p>
+                Telegram:
+                <a href="https://t.me/username" target="_blank">@username</a>
+            </p>
         </div>
-    </div>
-</div>
+    </section>
 
-<!-- Projects -->
-<div class="container-xxl py-6" id="project">
-    <div class="container">
-        <h1 class="display-5 mb-4">Projects</h1>
-        <p>My projects will be added here soon.</p>
-    </div>
-</div>
+    <!-- Footer -->
+    <footer class="container-fluid bg-dark text-white py-4 text-center">
+        © 2026 Abdirimov Boboxon. All Rights Reserved.
+    </footer>
 
-<!-- Contact -->
-<div class="container-xxl py-6" id="contact">
-    <div class="container">
-        <h1 class="display-5 mb-4">Contact</h1>
-        <p>Email: <b>boboxon@example.com</b></p>
-        <p>GitHub: <a href="https://github.com/AbdirimovBoboxon" target="_blank">github.com/AbdirimovBoboxon</a></p>
-        <p>Telegram: <a href="https://t.me/username" target="_blank">@username</a></p>
-    </div>
-</div>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="js/main.js"></script>
 
-<!-- Footer -->
-<div class="container-fluid bg-dark text-white py-4 text-center">
-    © 2026 Abdirimov Boboxon. All Rights Reserved.
-</div>
-
-<!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="js/main.js"></script>
+    <script>
+        if (typeof WOW === "function") {
+            new WOW().init();
+        }
+    </script>
 
 </body>
+
 </html>
