@@ -20,6 +20,12 @@
   --shadow: 0 28px 90px rgba(0, 0, 0, 0.62);
   --radius: 22px;
 
+  body {
+  background-image: url("../images/backgrounds/backgroundgrad.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
   --nav-h: 74px;
   --scroll-parallax: 0px;
   --saturn-alpha: 1;
