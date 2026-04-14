@@ -1,26 +1,55 @@
-// ===============================
-// SATURN FIXED (REAL IMAGE)
-// ===============================
+// === REAL TEXTURE (TOG'RI PATH) ===
+const loader = new THREE.TextureLoader();
 
-(() => {
-  const saturnCanvas = document.getElementById('saturn-canvas');
-  const saturnWrap = document.getElementById('saturn-wrap');
+// ❗ MUHIM: ../ NI OLIB TASHLA
+const saturnTexture = loader.load('images/fullsize/176saturn.jpg');
 
-  if (!saturnCanvas || !window.THREE) return;
+// PLANET
+const planet = new THREE.Mesh(
+  new THREE.SphereGeometry(1.3, 64, 64),
+  new THREE.MeshStandardMaterial({
+    map: saturnTexture
+  })
+);
 
-  const scene = new THREE.Scene();
+// RING (hozircha minimal — rasm ichida ring bor)
+const ring = new THREE.Mesh(
+  new THREE.RingGeometry(1.6, 2.6, 128),
+  new THREE.MeshBasicMaterial({
+    color: 0xaaaaaa,
+    transparent: true,
+    opacity: 0.2,
+    side: THREE.DoubleSide
+  })
+);
 
-  const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
-  camera.position.set(0, 0, 6);
+ring.rotation.x = Math.PI * 0.6;
 
-  const renderer = new THREE.WebGLRenderer({
-    canvas: saturnCanvas,
-    alpha: true,
-    antialias: true
-  });
+// GROUP
+const saturn = new THREE.Group();
+saturn.add(planet);
+saturn.add(ring);
 
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(saturnWrap.clientWidth, saturnWrap.clientHeight);
+scene.add(saturn);
+
+// POSITION
+saturn.position.set(1.2, 0.1, 0);
+
+// === ANIMATION ===
+const clock = new THREE.Clock();
+
+function animateSaturn() {
+  const time = clock.getElapsedTime();
+
+  planet.rotation.y += 0.002;   // slow
+  ring.rotation.z += 0.0005;
+
+  saturn.position.y = Math.sin(time * 0.2) * 0.1;
+
+  requestAnimationFrame(animateSaturn);
+}
+
+animateSaturn();
 
   // ===============================
   // LIGHTING
