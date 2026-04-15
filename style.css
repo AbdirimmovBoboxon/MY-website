@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: url('assets/images/background.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  color: white;
+}
+
+.content {
+  max-width: 500px;
+  z-index: 2;
+}
+
+h1 span {
+  color: #6cc4ff;
+}
+
+/* SATURN FIX */
+.saturn {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  animation: spin 60s linear infinite;
+  filter: drop-shadow(0 0 60px rgba(100,150,255,0.5));
+  opacity: 0.95;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
