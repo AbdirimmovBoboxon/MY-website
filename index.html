@@ -1,25 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Boboxon | Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Space Portfolio — Boboxon Abdirimov</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-<section class="hero">
-
-  <div class="overlay"></div>
-
-  <div class="content">
-    <h1>I am <span>Boboxon Abdirimov</span></h1>
-    <p>Building premium experiences across mobile, web, and desktop.</p>
+  <!-- Loader -->
+  <div id="loader" class="loader">
+    <div class="loader__orbital">
+      <div class="loader__dot"></div>
+      <div class="loader__dot"></div>
+      <div class="loader__dot"></div>
+    </div>
+    <p class="loader__text">Loading</p>
   </div>
 
-  <img src="assets/images/saturn.png" class="saturn">
+  <!-- Starfield canvas (keeps procedural stars for depth) -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
 
-</section>
+  <!-- Space fog and particle layers -->
+  <div class="space-fog" aria-hidden="true"></div>
+  <div class="particle-layer" aria-hidden="true"></div>
 
+  <!-- Cursor glow -->
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <nav class="nav container">
+      <a class="logo" href="#">BBOXN</a>
+      <div id="nav-links" class="nav__links" aria-hidden="false">
+        <a class="nav__link" href="#home">Home</a>
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#work">Work</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </div>
+      <button id="nav-toggle" class="nav__toggle" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section id="home" class="section hero" data-section>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <span class="eyebrow">Space / Cosmos</span>
+          <h1 class="hero__title">Boboxon <span class="hero__name">Abdirimov</span></h1>
+          <div class="hero__roles">
+            <span class="hero__rolesLabel">I build</span>
+            <span id="role-typed" class="hero__rolesTyped"></span>
+            <span class="hero__cursor">|</span>
+          </div>
+          <p class="hero__subtitle">Designing immersive interfaces and interactive 3D experiences.</p>
+          <div class="hero__actions">
+            <a class="btn primary" href="#work"><span class="btn__label">View Work</span><span class="btn__spark"></span></a>
+            <a class="btn ghost" href="#contact"><span class="btn__label">Contact</span></a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <!-- Saturn wrapper (Three.js canvas inside) -->
+          <div id="saturn-wrap" class="saturn-wrap">
+            <canvas id="saturn-canvas" class="saturn-canvas" aria-hidden="true"></canvas>
+            <div class="saturn-halo" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other sections (about, services, contact) would go here -->
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <strong>Boboxon Abdirimov</strong></div>
+      <div class="muted">Built with Three.js & love</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/three@0.154.0/build/three.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
