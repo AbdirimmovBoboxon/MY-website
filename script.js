@@ -703,8 +703,8 @@
     if (animate) window.requestAnimationFrame(animateFrame);
   };
 
-  if (saturnCanvas && saturnWrap && window.THREE) {
-    initSaturn3D({ animate: !prefersReducedMotion });
+  //if (saturnCanvas && saturnWrap && window.THREE) {
+   // initSaturn3D({ animate: !prefersReducedMotion });
   }
 
   /* ---------------------------
